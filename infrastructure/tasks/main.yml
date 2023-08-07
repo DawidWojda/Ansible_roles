@@ -1,8 +1,8 @@
 - name: Instaluj taski
-pip:
-  name:
-    - docker
-    - docker-compose
+  pip:
+    name:
+      - docker
+      - docker-compose
 
 -  name: Git
 git:
