@@ -1,17 +1,17 @@
-- name: Instaluj taski
+- name: Installuj taski
   pip:
     name:
-      - docker
-      - docker-compose
+    - docker
+    - docker-compose
 
 - name: Git
   git:
-    repo: "{{ git_repository}}"
-    destination:: "{{ deployment_path }}"
+    repo: "{{ git_repository }}"
+    dest: "{{ deployment_path }}"
     version: "{{ git_branch }}"
 
-- name: Run 'docker-compose up'
-  docker-compose:
+- name: docker compose
+  docker_compose:
     project_src: "{{ deployment_path }}"
     build: true
     debug: true
